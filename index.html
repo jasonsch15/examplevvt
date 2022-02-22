@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <!--cdn bootstrap-->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">  
+<!-- JavaScript Bundle with Popper -->
+</head>
+<body>
+    
+  <!--label de hotel con un select de hoteles con bootstrap-->
+    <div class="container" >
+        <div class="row" style="padding: 20px 20px 20px 20px;">
+        <div class="row col-md-6" >
+            <label for="hotel"  class="col-4" style="padding-top: 7px;">Seleccione un hotel</label>
+            <select class="col-4 form-select" id="hotel" style="width: auto;">
+            <option>Hotel 1 - $120</option>
+            <option>Hotel 2 - $120</option>
+            <option>Hotel 3 - $120</option>
+            <option>Hotel 4 - $120</option>
+            <option>Hotel 5 - $120</option>
+            </select>
+            <label for="" class="col-4" style="padding-top: 7px;">Precio : $260 </label>
+
+        </div>
+        <h4>Incluye</h4>
+        <ul class="row">
+          <div class="col-4">
+            <li>Habitación</li>
+            <li>Cama Doble </li>
+            <li>Cama Matrimonial </li>
+            <li>Cama King </li>
+          </div>
+          <div  class="col-3">
+            <li style="list-style: none;">Precio :$20 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/1200px-OOjs_UI_icon_edit-ltr-progressive.svg.png" alt="" data-bs-toggle="modal" data-bs-target="#editModal" style="width: 18px; cursor: pointer; margin-left: 10px"> </li>
+            <li style="list-style: none;">Precio :$30  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/1200px-OOjs_UI_icon_edit-ltr-progressive.svg.png" alt="" data-bs-toggle="modal" data-bs-target="#editModal" style="width: 18px; cursor: pointer; margin-left: 10px"> </li>
+            <li style="list-style: none;">Precio :$40  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/1200px-OOjs_UI_icon_edit-ltr-progressive.svg.png" alt="" data-bs-toggle="modal" data-bs-target="#editModal" style="width: 18px; cursor: pointer; margin-left: 10px"> </li>
+            <li style="list-style: none;">Precio :$50  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/1200px-OOjs_UI_icon_edit-ltr-progressive.svg.png" alt="" data-bs-toggle="modal" data-bs-target="#editModal" style="width: 18px; cursor: pointer; margin-left: 10px"> </li>
+          </div>
+          
+        </ul>
+        <!--boton de agregar que abre modal con la opcion-->
+
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 470px;">
+         Agregar Extra
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar Extra</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+               <!--Agregar extra-->
+                <label for="">Descripcion</label>
+                <input type="text" class="form-control" id="descripcion" placeholder="Descripcion">
+                <label for="">Precio</label>
+                <input type="text" class="form-control" id="precio" placeholder="Precio">
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Agregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--edit modal-->
+        <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Editar Extra</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+               <!--Agregar extra-->
+                <label for="">Descripcion</label>
+                <input type="text" class="form-control" id="descripcion" placeholder="Descripcion" value="habitacion">
+                <label for="">Precio</label>
+                <input type="text" class="form-control" id="precio" placeholder="Precio" value="120">
+
+              </div>
+              <div class="modal-footer">
+                <!--delete-->
+                
+     
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                  Eliminar
+                  </button>
+                <button type="button" class="btn btn-primary">Guardar cambios</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+
+
+<script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>
